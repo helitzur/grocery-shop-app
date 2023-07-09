@@ -1,0 +1,24 @@
+<div>
+    <label for="fromDate">From:</label>
+    <input type="date" id="fromDate" [(ngModel)]="fromDate"  (ngModelChange)="handleDateChange()">
+
+  
+    <label for="toDate">To:</label>
+    <input type="date" id="toDate" [(ngModel)]="toDate" (ngModelChange)="handleDateChange()">
+  
+    <button (click)="filterChartData()">Filter</button>
+  </div>
+  <ngx-charts-line-chart
+  [view]="view"
+  [customColors]="lineChartCustomColors"
+  [legend]="legend"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [xAxis]="xAxis"
+  [yAxis]="yAxis"
+  [xAxisLabel]="xAxisLabel"
+  [yAxisLabel]="yAxisLabel"
+  [timeline]="timeline"
+  [results]="data"
+ >
+</ngx-charts-line-chart>
